@@ -1,0 +1,6 @@
+.vscode/
+build/
+build.sh
+*.log
+log/results/time/*.txt
+log/results/node/*.txt
