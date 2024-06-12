@@ -1,0 +1,1 @@
+perf stat -e  L1-dcache-loads  -e L1-dcache-load-misses -e L1-dcache-stores -e LLC-loads -e LLC-misses -e page-faults build/qpp_qasm /home/student/workspace/quantum/QASMBench/medium/ising_n26/ising_n26.qasm 32  /home/student/workspace/quantum/FLATDD/results/ising_n26
