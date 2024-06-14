@@ -4,3 +4,5 @@ build.sh
 *.log
 log/results/time/*.txt
 log/results/node/*.txt
+*.pdf
+*.csv
