@@ -183,7 +183,7 @@ void SwitchSimulator<Config>::singleShot(const bool ignoreNonUnitaries) {
                 opNum++;
             }
         }
-        std::cout << "Total cost: " << total_comp << std::endl;
+        std::cout << "Cost: " << total_comp << std::endl;
         SwitchSimulator<Config>::stateVecIdx = opNum%2;
     }
     else {
@@ -335,7 +335,7 @@ void SwitchSimulator<Config>::singleShot(const bool ignoreNonUnitaries) {
                             dd_schedule.push_back(merge_cur);
                             in_or_out.push_back(0);
                             total_comp += ( dp_cost1);
-                            std::cout << "Total cost: " << total_comp << std::endl;
+                            std::cout << "Cost: " << total_comp-saved_comp << std::endl;
                             std::cout << "Saved cost %: " << 100 *(double) saved_comp / (double) total_comp << "%"<< std::endl;
                         }
                         else if (fuse == 2) { // merge dd ops
@@ -368,7 +368,7 @@ void SwitchSimulator<Config>::singleShot(const bool ignoreNonUnitaries) {
                             }
                             dd_schedule.push_back(merge_cur);
                             in_or_out.push_back(0);
-                            std::cout << "Total cost: " << total_comp << std::endl;
+                            std::cout << "Cost: " << total_comp << std::endl;
                         }
                         
                         auto end = std::chrono::system_clock::now();
