@@ -2,7 +2,6 @@
 build.sh
 extern/taskflow/3rd-party/tbb/build/*
 *.log
-log/results/time/*.txt
 log/results/node/*.txt
 *.pdf
 *.csv
