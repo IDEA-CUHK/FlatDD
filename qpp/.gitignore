@@ -52,7 +52,6 @@ CMakeSettings.json
 
 # CLion
 .idea/
-build/
 cmake-build*/
 
 # Documentation source files
