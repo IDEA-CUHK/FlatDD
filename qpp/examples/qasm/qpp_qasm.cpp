@@ -12,12 +12,14 @@ int main(int argc, char** argv) {
     using namespace qpp;
     std::string filename;
     std::string output_pathname;
+    std::string time_pathname;
     int num_cores = 0;
     // read the circuit from the input stream
     if (argc > 1) {
         filename = std::string(argv[1]);
         num_cores = std::stoi(argv[2]);                     // number of cores
         output_pathname = std::string(argv[3]);
+        time_pathname = std::string(argv[4]);
     }
     else {
         std::cout<<"ERROR: arg input the file name";
@@ -45,9 +47,9 @@ int main(int argc, char** argv) {
 
     // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     // std::cout << q_engine << '\n';
-    // q_engine.output_finalstate(output_pathname+"/qpp_result.txt");
+    q_engine.output_finalstate(output_pathname);
     // +"/qpp_time.txt"
-    q_engine.output_timerecord(output_pathname);
+    q_engine.output_timerecord(time_pathname);
 
 
 

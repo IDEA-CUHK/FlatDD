@@ -1,3 +1,7 @@
 *.pdf
 *.csv
 *.log
+results/state/
+results/*.cpp
+results/qaf
+results/daf

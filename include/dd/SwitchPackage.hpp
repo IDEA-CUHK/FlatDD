@@ -16,6 +16,7 @@
 #include "dd/DMAVTable.hpp"
 #include "dd/kernel/kernel.cuh"
 
+#include <cstring> //std::memcpy
 #include <algorithm>
 #include <array>
 #include <bitset>
@@ -2329,10 +2330,10 @@ private:
         num_buf++;
       }
     }
-    // for (int i = 0; i < num_buf; i++) {
-    //     std::memset(z_real_vec[i], 0, sizeof(fp) * (offset1-offset0));
-    //     std::memset(z_imag_vec[i], 0, sizeof(fp) * (offset1-offset0));
-    // }
+    for (int i = 0; i < num_buf; i++) {
+        std::memset(z_real_vec[i], 0, sizeof(fp) * (offset1-offset0));
+        std::memset(z_imag_vec[i], 0, sizeof(fp) * (offset1-offset0));
+    }
 
     for (size_t i = 0; i < n_thread; i++) // parfor, task graph may apply to mitigate workload imbalance
     {
