@@ -1,4 +1,7 @@
 # FlatDD
+
+![FlatDD](FlatDD-logo.png)
+
 `FlatDD` achieves 34.81x speed-up and 1.93x memory reduction on commonly used quantum circuits compared to state-of-the-art quantum circuit simulators. 
 Our computational artifact compares the performance of `FlatDD` with DD-based QCS `DDSIM` and array-based QCS `Quantum++` on 12 circuits. We also evaluate `FlatDD`'s scalability on different numbers of threads, `FlatDD`'s DD-to-array parallel conversion algorithm, `FlatDD`'s caching technique, and the DMAVM-aware gate-fusion algorithm. 
 Our computational artifact includes `FlatDD`, `DDSIM`, `Quantum++` and the 12 circuits. 
